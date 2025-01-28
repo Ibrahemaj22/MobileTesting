@@ -67,7 +67,7 @@ public class MyTestCases {
 	public void ClickOnAllItems() throws MalformedURLException, InterruptedException {
 
 		List<WebElement> AllButtons = driver.findElements(By.className("android.widget.ImageButton"));
-Thread.sleep(3000);
+		Thread.sleep(3000);
 		for (int i = 0; i < AllButtons.size(); i++) {
 			AllButtons.get(i).click();
 		}
@@ -119,27 +119,6 @@ Thread.sleep(3000);
 		List<WebElement> AllButtons = driver.findElements(By.className("android.widget.ImageButton"));
 
 		for (int i = 0; i < AllButtons.size(); i++) {
-
-//			if (AllButtons.get(i).getDomAttribute("resource-id").contains("digit")
-//					&& AllButtons.get(i).getDomAttribute("resource-id").contains(FirstNumber)
-//					|| AllButtons.get(i).getDomAttribute("resource-id").contains(SecondNumber)) {
-//				AllButtons.get(i).click();
-//				driver.findElement(By.id("com.google.android.calculator:id/op_mul")).click();
-//			
-//			}
-
-//			if (AllButtons.get(i).getDomAttribute("resource-id").contains("digit")
-//					&& AllButtons.get(i).getDomAttribute("resource-id").contains(FirstNumber)) {
-//				AllButtons.get(i).click();
-//				driver.findElement(By.id("com.google.android.calculator:id/op_mul")).click();
-//			}
-//
-//			if (AllButtons.get(i).getDomAttribute("resource-id").contains("digit")
-//					&& AllButtons.get(i).getDomAttribute("resource-id").contains(SecondNumber)) {
-//				AllButtons.get(i).click();
-//			}
-
-			// best solution
 
 			if (AllButtons.get(i).getDomAttribute("resource-id").contains("digit_" + FirstNumber)) {
 				AllButtons.get(i).click();
